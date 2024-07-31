@@ -1,0 +1,41 @@
+﻿@model DoAn.Models.ErrorViewModel
+
+@{
+    ViewData["Title"] = "DangNhap";
+}
+
+<h1>Trang Đăng Nhập</h1>
+
+<form>
+    <h2 class="text-center text-danger">
+        Đăng Nhập
+    </h2>
+    <div class="row m-1">
+        <div class="col-4 col-md-3 text-right">Tên tài khoảnn</div>
+        <div class="col-8 col-md-9">
+            <input name="TaiKhoan" placeholder="Nhập Tên tài khoản" class="w-100" />
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-4 col-md-3 text-right">Mật Khẩu</div>
+        <div class="col-8 col-md-9">
+            <input name="MatKhau" placeholder="Nhập Mật Khẩu" class="w-100" />
+        </div>
+
+        <div class="row m-1">
+            <div class="col-4 col-md-3 text-right"></div>
+            <div class="col-8 col-md-9">
+                <button class="btn btn-success">Đăng ký</button>
+                <button class="btn btn-danger" type="reset">Đăng Nhập</button>
+            </div>
+        </div>
+</form>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

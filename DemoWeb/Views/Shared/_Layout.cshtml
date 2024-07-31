@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DemoWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DemoWeb.styles.css" asp-append-version="true" />
+</head>
+<body>
+   <header style="background-color:cornflowerblue;" class="navbar navbar-expand-sm navbar-dark">
+        <div class="container">
+            <a href="Index" class="navbar-brand">BOOKSTORES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto">
+                    <!--Menu Giới thiệu-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/" id="dropdownGiới thiệu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Giới thiệu</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownIntroduction">
+                            <li><a class="dropdown-item" href="Home/App">Ứng dụng</a></li>
+                            <li><a class="dropdown-item" href="Home/Member">About</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="Index" class="nav-link">Trang chủ</a></li>
+                    <!--Menu Danh mục QL-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownDanh mục" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục QL</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownCategory">
+                            <li><a class="dropdown-item" href="/">QL Doanh thu</a></li>
+                            <li><a class="dropdown-item" href="/">QL Nhân viên</a></li>
+                        </ul>
+                    </li>
+                    <!---Menu Sửa-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownEdit" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sửa</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownEdit">
+                            <li><a class="dropdown-item" href="/">Thêm sách</a></li>
+                            <li><a class="dropdown-item" href="/">Xóa sách</a></li>
+                        </ul>
+                    </li>
+                    <!--Tìm kiếm-->
+                    <input class="fa fa-search" style="font-size:20px;margin-right: 10px;" type="text" placeholder="Tìm kiếm" name="TimKiem">
+                    <li style="position:absolute;right:0;" class="nav-item"><a href="/Logout" class="nav-link">Đăng xuất</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </header>
+    <div class="container">
+        <!--Mua sắm-->
+        <button><i style="position:absolute;right:100px;font-size:30px;" class="fa fa-shopping-cart"></i></button>
+    </div>
+     
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
