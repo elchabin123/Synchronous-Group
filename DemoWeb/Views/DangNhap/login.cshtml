@@ -1,0 +1,237 @@
+﻿@model DemoWeb.Models.ErrorViewModel
+
+@{
+    ViewData["Title"] = "login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+
+    <style>
+        /* Định dạng chung cho body */
+        body { font-family: Arial, Helvetica, sans-serif; }
+
+        /* Định dạng cho các input text và password */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* Định dạng cho các nút button */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        /* Đổi độ mờ khi di chuột qua button */
+        button:hover { opacity: 0.8; }
+
+        /* Định dạng cho nút cancel */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Định dạng cho container chứa hình ảnh */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        /* Định dạng cho hình ảnh avatar */
+        img.avatar {
+            width: 20%;
+            border-radius: 40%;
+        }
+
+        /* Định dạng cho container chính */
+        .container {
+            padding: 16px;
+        }
+
+        /* Định dạng cho span chứa mật khẩu */
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* Định dạng cho modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        /* Định dạng cho nội dung của modal */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* Định dạng cho nút đóng modal */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        /* Định dạng khi di chuột qua hoặc tập trung vào nút đóng */
+        .close:hover, .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* Thêm hiệu ứng zoom cho modal */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s;
+        }
+
+        /* Keyframes cho hiệu ứng zoom */
+        -webkit-keyframes animatezoom {
+            from {-webkit-transform: scale(0)} 
+            to {-webkit-transform: scale(1)}
+        }
+        keyframes animatezoom {
+            from {transform: scale(0)} 
+            to {transform: scale(1)}
+        }
+
+        /* Thay đổi định dạng cho span và nút cancel trên màn hình nhỏ */
+        media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Chào Mừng Bạn</h2>
+    <!-- Nút để mở modal login form -->
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+    <div id="id01" class="modal">
+        <!-- Form đăng nhập bên trong modal -->
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              
+                <img src="~/Picture/NV_Naruto.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <!-- Nhãn và ô nhập tên tài khoản -->
+                <label for="uname"><b>Tên tài khoản</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                
+                <!-- Nhãn và ô nhập mật khẩu -->
+                <label for="psw"><b>Mật Khẩu</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                <!-- Nút đăng nhập -->
+                <button type="submit">Login</button>
+                
+                <!-- Hộp kiểm nhớ tài khoản -->
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1">
+                <!-- Nút hủy bỏ và liên kết quên mật khẩu -->
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+
+
+    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+
+    <div id="id02" class="modal">
+        <!-- Form đăng ký bên trong modal -->
+        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Đăng Ký</h1>
+                <p>Vui lòng nhập đầy đủ thông tin. bờ ly</p>
+                <hr>
+                <!-- Nhãn và ô nhập email -->
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <!-- Nhãn và ô nhập mk -->
+                <label for="psw"><b>Mật Khẩu</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+                <!-- Nhãn và ô nhập lại mk -->
+                <label for="psw-repeat"><b>Nhập Lại Mật Khẩu</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <!-- Nút tích check -->
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+                <!-- hiện thị hộp thoại điều khoản -->
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <!-- Nút đăng ký -->
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Lấy đối tượng modal
+        var modal = document.getElementById('id01');
+
+        // Đóng modal khi người dùng click bên ngoài modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        // Lấy đối tượng modal
+        var modal = document.getElementById('id02');
+
+        // Đóng modal khi người dùng click bên ngoài modal
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
