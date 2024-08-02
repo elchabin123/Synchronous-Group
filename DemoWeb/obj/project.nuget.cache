@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Lt7m58nVffL78GoHOpOoNIKfKZLcOalpPHXn/uoesMxevjHfzIKlM/GJMxRHZA31fmgiynje5IJykD36eaoOSQ==",
+  "dgSpecHash": "5HjoLJIgSmct7TcnzFDcn1KOSMQJF4+ngH3aQc166Z9F4ydb1erOYgVGJGNx4x6xJX9PsD+IvuMc6du+tAl/Yw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vanha\\Desktop\\git\\Synchronous-Group\\DemoWeb\\DemoWeb.csproj",
+  "projectFilePath": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\DemoWeb\\DemoWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vanha\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Vanha\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -121,12 +121,5 @@
     "C:\\Users\\Vanha\\.nuget\\packages\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "C:\\Users\\Vanha\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Vanha\\Desktop\\git\\Synchronous-Group\\DemoWeb\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
