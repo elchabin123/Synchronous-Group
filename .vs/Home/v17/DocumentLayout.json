@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\dangnhap\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\dangnhap\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\home\\app.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\app.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "DemoWeb\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-03T05:33:14.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "DemoWeb\\Models\\ErrorViewModel.cs",
@@ -71,32 +84,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "DemoWeb\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABtAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-02T06:58:53.432Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "DemoWeb\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAALUAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-01T18:02:58.34Z",
+              "WhenOpened": "2024-08-02T06:58:53.432Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "App.cshtml",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\App.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\App.cshtml",
@@ -108,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "login.cshtml",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\DangNhap\\login.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\DangNhap\\login.cshtml",
@@ -120,19 +121,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "DemoWeb\\Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Controllers\\HomeController.cs",
               "RelativeToolTip": "DemoWeb\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T11:41:32.632Z"
+              "WhenOpened": "2024-07-27T11:41:32.632Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Login.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Login.cshtml",
@@ -144,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Member.cshtml",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Member.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Member.cshtml",
