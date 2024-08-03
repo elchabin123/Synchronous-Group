@@ -40,5 +40,9 @@ namespace DemoWeb.Controllers
         {
             return View();
         }
+        public IActionResult QLNV() 
+        {
+            return View();
+        }
     }
 }

@@ -26,10 +26,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\nghbv\OneDrive\Máy tính\Synchronous-Group\DemoWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/DangNhap/login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFuZ05oYXBcbG9naW4uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Home/App.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBcHAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Home/QLNV.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRTE5WLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Shared/Error.cshtml]

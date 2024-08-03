@@ -1,0 +1,269 @@
+﻿@model DemoWeb.Models.ErrorViewModel
+
+@{
+    ViewData["Title"] = "QLNV";
+}
+
+<h1>Quản Lý Nhân Viên</h1>
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Nhân viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 10px;
+            min-height: 50px;
+            border-bottom: #fff 3px solid;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        .button {
+            background: #333;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+            .button:hover {
+                background: #555;
+            }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 400px;
+        }
+
+            .modal-content h2 {
+                margin-top: 0;
+            }
+
+            .modal-content .form-group {
+                margin-bottom: 15px;
+            }
+
+                .modal-content .form-group label {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                .modal-content .form-group input {
+                    width: 100%;
+                    padding: 8px;
+                    box-sizing: border-box;
+                }
+
+                .modal-content .form-group button {
+                    margin-top: 10px;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quản lý Nhân viên</h1>
+    </header>
+
+    <div class="container">
+        <button class="button" onclick="openAddModal()">Thêm Nhân viên</button>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Họ và Tên</th>
+                    <th>Chức vụ</th>
+                    <th>Phòng ban</th>
+                    <th>Ngày vào làm</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Các hàng nhân viên sẽ được thêm bằng JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Thêm Nhân viên -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <h2>Thêm Nhân viên</h2>
+            <div class="form-group">
+                <label for="addName">Họ và Tên:</label>
+                <input type="text" id="addName">
+            </div>
+            <div class="form-group">
+                <label for="addPosition">Chức vụ:</label>
+                <input type="text" id="addPosition">
+            </div>
+            <div class="form-group">
+                <label for="addDepartment">Phòng ban:</label>
+                <input type="text" id="addDepartment">
+            </div>
+            <div class="form-group">
+                <label for="addDate">Ngày vào làm:</label>
+                <input type="date" id="addDate">
+            </div>
+            <button class="button" onclick="addEmployee()">Thêm</button>
+            <button class="button" onclick="closeAddModal()">Hủy</button>
+        </div>
+    </div>
+
+    <!-- Modal Sửa Nhân viên -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>Sửa Nhân viên</h2>
+            <div class="form-group">
+                <label for="editName">Họ và Tên:</label>
+                <input type="text" id="editName">
+            </div>
+            <div class="form-group">
+                <label for="editPosition">Chức vụ:</label>
+                <input type="text" id="editPosition">
+            </div>
+            <div class="form-group">
+                <label for="editDepartment">Phòng ban:</label>
+                <input type="text" id="editDepartment">
+            </div>
+            <div class="form-group">
+                <label for="editDate">Ngày vào làm:</label>
+                <input type="date" id="editDate">
+            </div>
+            <button class="button" onclick="updateEmployee()">Cập nhật</button>
+            <button class="button" onclick="closeEditModal()">Hủy</button>
+        </div>
+    </div>
+
+    <script>
+        let employeeIdCounter = 1;
+
+        function openAddModal() {
+            document.getElementById('addModal').style.display = 'flex';
+        }
+
+        function closeAddModal() {
+            document.getElementById('addModal').style.display = 'none';
+        }
+
+        function openEditModal(employeeId) {
+            const employee = document.getElementById('employee-' + employeeId);
+            document.getElementById('editName').value = employee.querySelector('.name').innerText;
+            document.getElementById('editPosition').value = employee.querySelector('.position').innerText;
+            document.getElementById('editDepartment').value = employee.querySelector('.department').innerText;
+            document.getElementById('editDate').value = employee.querySelector('.date').innerText;
+            document.getElementById('editModal').style.display = 'flex';
+            document.getElementById('editModal').setAttribute('data-id', employeeId);
+        }
+
+        function closeEditModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+
+        function addEmployee() {
+            const name = document.getElementById('addName').value;
+            const position = document.getElementById('addPosition').value;
+            const department = document.getElementById('addDepartment').value;
+            const date = document.getElementById('addDate').value;
+
+            const tableBody = document.querySelector('#employeeTable tbody');
+            const row = tableBody.insertRow();
+            row.setAttribute('id', 'employee-' + employeeIdCounter);
+
+            row.innerHTML = `
+                        <td>${employeeIdCounter}</td>
+                        <td class="name">${name}</td>
+                        <td class="position">${position}</td>
+                        <td class="department">${department}</td>
+                        <td class="date">${date}</td>
+                        <td class="action-buttons">
+                            <button class="button" onclick="openEditModal(${employeeIdCounter})">Sửa</button>
+                            <button class="button" onclick="deleteEmployee(${employeeIdCounter})">Xóa</button>
+                        </td>
+                    `;
+
+            employeeIdCounter++;
+            closeAddModal();
+        }
+
+        function updateEmployee() {
+            const employeeId = document.getElementById('editModal').getAttribute('data-id');
+            const employee = document.getElementById('employee-' + employeeId);
+
+            employee.querySelector('.name').innerText = document.getElementById('editName').value;
+            employee.querySelector('.position').innerText = document.getElementById('editPosition').value;
+            employee.querySelector('.department').innerText = document.getElementById('editDepartment').value;
+            employee.querySelector('.date').innerText = document.getElementById('editDate').value;
+
+            closeEditModal();
+        }
+
+        function deleteEmployee(employeeId) {
+            const employee = document.getElementById('employee-' + employeeId);
+            employee.remove();
+        }
+    </script>
+</body>
+</html>
+
