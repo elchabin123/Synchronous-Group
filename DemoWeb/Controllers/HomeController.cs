@@ -17,11 +17,6 @@ namespace DemoWeb.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
         public IActionResult App()
         {
             return View();
@@ -41,6 +36,10 @@ namespace DemoWeb.Controllers
             return View();
         }
         public IActionResult QLNV() 
+        {
+            return View();
+        }
+        public IActionResult Intro() 
         {
             return View();
         }

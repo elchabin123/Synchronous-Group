@@ -1,7 +1,7 @@
 ﻿@model DemoWeb.Models.ErrorViewModel
 
 @{
-    ViewData["Title"] = "QLNV";
+    ViewData["Title"] = "Intro";
 }
 
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý Nhân viên</title>
+    <title>Trang giới thiệu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +18,7 @@
             background-color: #f4f4f4;
         }
 
-        
+
 
         header {
             background: #333;
@@ -118,77 +118,58 @@
 </head>
 <body>
     <header>
-        <h1>Quản lý Nhân viên</h1>
+        <h1>Sửa thông tin giới thiệu/h1>
     </header>
 
     <div class="container">
-        <button class="button" onclick="openAddModal()">Thêm Nhân viên</button>
+        <button class="button" onclick="openAddModal()">Sửa</button>
         <table id="employeeTable">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Họ và Tên</th>
-                    <th>Chức vụ</th>
-                    <th>Phòng ban</th>
-                    <th>Ngày vào làm</th>
-                    <th>Thao tác</th>
+                    <th>Ảnh bìa đầu trang</th>
+                    <th>Ảnh bìa trái</th>
+                    <th>Nội dung</th>
+                    <th>Địa chỉ</th>
+                    <th>Liên hệ</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Các hàng nhân viên sẽ được thêm bằng JavaScript -->
+                <!-- Các hàng giới thiệu sẽ được thêm bằng JavaScript -->
             </tbody>
         </table>
     </div>
 
-    <!-- Modal Thêm Nhân viên -->
+    <!-- Model Sửa -->
     <div id="addModal" class="modal">
         <div class="modal-content">
-            <h2>Thêm Nhân viên</h2>
+            <h2>Sửa thông tin</h2>
             <div class="form-group">
-                <label for="addName">Họ và Tên:</label>
-                <input type="text" id="addName">
+                <label for="addName">Ảnh bìa đầu trang:</label>
+                <input type="file" name="ImageFile" />                
             </div>
             <div class="form-group">
-                <label for="addPosition">Chức vụ:</label>
-                <input type="text" id="addPosition">
+                <label for="addPosition">Ảnh bìa trái:</label>
+                <input type="file" name="ImageFile" />               
             </div>
             <div class="form-group">
-                <label for="addDepartment">Phòng ban:</label>
+                <label for="addDepartment">Nội dung:</label>
                 <input type="text" id="addDepartment">
             </div>
             <div class="form-group">
-                <label for="addDate">Ngày vào làm:</label>
-                <input type="date" id="addDate">
+                <label for="addDate">Địa chỉ:</label>
+                <input type="text" id="addDepartment">
             </div>
-            <button class="button" onclick="addEmployee()">Thêm</button>
+            <div class="form-group">
+                <label for="addDate">Liên hệ:</label>
+                <input type="text" id="addDepartment">
+            </div>
+            <button class="button" onclick="addEmployee()">Save</button>
             <button class="button" onclick="closeAddModal()">Hủy</button>
         </div>
     </div>
 
-    <!-- Modal Sửa Nhân viên -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <h2>Sửa Nhân viên</h2>
-            <div class="form-group">
-                <label for="editName">Họ và Tên:</label>
-                <input type="text" id="editName">
-            </div>
-            <div class="form-group">
-                <label for="editPosition">Chức vụ:</label>
-                <input type="text" id="editPosition">
-            </div>
-            <div class="form-group">
-                <label for="editDepartment">Phòng ban:</label>
-                <input type="text" id="editDepartment">
-            </div>
-            <div class="form-group">
-                <label for="editDate">Ngày vào làm:</label>
-                <input type="date" id="editDate">
-            </div>
-            <button class="button" onclick="updateEmployee()">Cập nhật</button>
-            <button class="button" onclick="closeEditModal()">Hủy</button>
-        </div>
-    </div>
+    
 
     <script>
         let employeeIdCounter = 1;
@@ -226,16 +207,16 @@
             row.setAttribute('id', 'employee-' + employeeIdCounter);
 
             row.innerHTML = `
-                        <td>${employeeIdCounter}</td>
-                        <td class="name">${name}</td>
-                        <td class="position">${position}</td>
-                        <td class="department">${department}</td>
-                        <td class="date">${date}</td>
-                        <td class="action-buttons">
-                            <button class="button" onclick="openEditModal(${employeeIdCounter})">Sửa</button>
-                            <button class="button" onclick="deleteEmployee(${employeeIdCounter})">Xóa</button>
-                        </td>
-                    `;
+                                <td>${employeeIdCounter}</td>
+                                <td class="name">${name}</td>
+                                <td class="position">${position}</td>
+                                <td class="department">${department}</td>
+                                <td class="date">${date}</td>
+                                <td class="action-buttons">
+                                    <button class="button" onclick="openEditModal(${employeeIdCounter})">Sửa</button>
+                                    <button class="button" onclick="deleteEmployee(${employeeIdCounter})">Xóa</button>
+                                </td>
+                            `;
 
             employeeIdCounter++;
             closeAddModal();

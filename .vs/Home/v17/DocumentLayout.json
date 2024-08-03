@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\demoweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\demoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\asus\\desktop\\synchronous-group\\demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\asus\\desktop\\synchronous-group\\demoweb\\views\\home\\qlnv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\qlnv.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\asus\\desktop\\synchronous-group\\demoweb\\views\\home\\intro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\intro.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,65 +42,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Home.cshtml",
-              "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Home.cshtml",
-              "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Home.cshtml",
-              "RelativeToolTip": "DemoWeb\\Views\\Home\\Home.cshtml",
-              "ViewState": "AQIAAHsAAAAAAAAAAAAAAHUAAAB3AAAA",
+              "DocumentIndex": 4,
+              "Title": "Intro.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Views\\Home\\Intro.cshtml",
+              "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Intro.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Views\\Home\\Intro.cshtml",
+              "RelativeToolTip": "DemoWeb\\Views\\Home\\Intro.cshtml",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAAAHkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-03T06:27:46.543Z",
+              "WhenOpened": "2024-08-03T09:39:16.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QLNV.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Views\\Home\\QLNV.cshtml",
+              "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\QLNV.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Views\\Home\\QLNV.cshtml",
+              "RelativeToolTip": "DemoWeb\\Views\\Home\\QLNV.cshtml",
+              "ViewState": "AQIAAPUAAAAAAAAAAADwvwcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-03T09:03:28.819Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "DemoWeb\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-03T06:27:45.943Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "DemoWeb\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAC4AAAByAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAADwvyMAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-03T06:27:33.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "DemoWeb\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Controllers\\HomeController.cs",
               "RelativeToolTip": "DemoWeb\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAB0AAAAAAAAAAAA8wCkAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-03T06:27:18.806Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ASUS\\Desktop\\Synchronous-Group\\DemoWeb\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "DemoWeb\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAADsAAABuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-03T05:33:14.839Z",
               "EditorCaption": ""
