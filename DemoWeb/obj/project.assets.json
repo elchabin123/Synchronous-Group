@@ -5703,11 +5703,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\DemoWeb\\DemoWeb.csproj",
+      "projectUniqueName": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\Synchronous-Group\\DemoWeb\\DemoWeb.csproj",
       "projectName": "DemoWeb",
-      "projectPath": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\DemoWeb\\DemoWeb.csproj",
+      "projectPath": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\Synchronous-Group\\DemoWeb\\DemoWeb.csproj",
       "packagesPath": "C:\\Users\\Vanha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\DemoWeb\\obj\\",
+      "outputPath": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\Synchronous-Group\\DemoWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vanha\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5HjoLJIgSmct7TcnzFDcn1KOSMQJF4+ngH3aQc166Z9F4ydb1erOYgVGJGNx4x6xJX9PsD+IvuMc6du+tAl/Yw==",
+  "dgSpecHash": "oFWfUpBtgTWXlXj9uGLZvNaLzBz5VyyfuAaJcZiFloPD00UWDsYRvTgBNo20D+VeoD9nZP1FchgWBtB27PGkFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\DemoWeb\\DemoWeb.csproj",
+  "projectFilePath": "C:\\Users\\Vanha\\Desktop\\doAn\\Synchronous-Group\\Synchronous-Group\\DemoWeb\\DemoWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vanha\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Vanha\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

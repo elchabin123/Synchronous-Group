@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/DemoWeb.styles.css" asp-append-version="true" />
 </head>
 <body>
-   <header style="background-color:cornflowerblue;" class="navbar navbar-expand-sm navbar-dark">
+    <header style="background-color:cornflowerblue;" class="navbar navbar-expand-sm navbar-dark">
         <div class="container">
             <a href="Index" class="navbar-brand">BOOKSTORES</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,47 +17,41 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto">
-                    <!--Menu Giới thiệu-->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/" id="dropdownGiới thiệu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Giới thiệu</a>
+                        <a class="nav-link dropdown-toggle" href="/" id="dropdownGioiThieu" role="button" data-bs-toggle="dropdown" aria-expanded="false">Giới thiệu</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownIntroduction">
-                            <li><a class="dropdown-item" href="Home/App">Ứng dụng</a></li>
-                            <li><a class="dropdown-item" href="Home/Member">About</a></li>
+                            <li><a class="dropdown-item" href="/Home/App">Ứng dụng</a></li>
+                            <li><a class="dropdown-item" href="/Home/Member">About</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a href="Index" class="nav-link">Trang chủ</a></li>
-                    <!--Menu Danh mục QL-->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownDanh mục" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục QL</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownDanhMuc" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục QL</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownCategory">
                             <li><a class="dropdown-item" href="/">QL Doanh thu</a></li>
+<<<<<<< HEAD
                             <li><a href="@Url.Action("QLNV", "Home")" class="dropdown-item">QL Nhân viên</a></li>
                             
+=======
+                            <li><a class="dropdown-item" href="/">QL Nhân viên</a></li>
+                            <li><a class="dropdown-item" href="/">QL Sản phẩm</a></li>
+>>>>>>> b134fa43112648858c3ff0a2dc4471ef6aadc210
                         </ul>
                     </li>
-                    <!---Menu Sửa-->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownEdit" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sửa</a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownEdit">
-                            <li><a class="dropdown-item" href="/">Thêm sách</a></li>
-                            <li><a class="dropdown-item" href="/">Xóa sách</a></li>
-                        </ul>
-                    </li>
-                    <!--Tìm kiếm-->
-                    <input class="fa fa-search" style="font-size:20px;margin-right: 10px;" type="text" placeholder="Tìm kiếm" name="TimKiem">
-
                 </ul>
-                <!--đăng nhập-->
-                <a href="@Url.Action("Login", "Home")" class="btn btn-primary">Đăng nhập</a>
-                
+                <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+                <a href="/Home/Login" class="btn btn-primary">Đăng nhập</a>
             </div>
-
         </div>
-
-
     </header>
+<<<<<<< HEAD
     <div class="container">
         <!--Mua sắm-->
+=======
+    <!--Giỏ hàng-->
+    <div class="container position-relative">
+        <button class="btn position-absolute top-0 end-0 mt-3"><i class="fas fa-shopping-cart fa-2x"></i></button>
+>>>>>>> b134fa43112648858c3ff0a2dc4471ef6aadc210
     </div>
      
         <main role="main" class="pb-3">
