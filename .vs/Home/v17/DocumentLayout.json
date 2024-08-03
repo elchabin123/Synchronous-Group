@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|solutionrelative:demoweb\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9EC9C3DB-B710-4ECC-90E6-BE36C83FB9BF}|DemoWeb\\DemoWeb.csproj|c:\\users\\nghbv\\onedrive\\m\u00E1y t\u00EDnh\\synchronous-group\\demoweb\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Home.cshtml",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Home.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Home.cshtml",
@@ -55,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Home\\Privacy.cshtml",
@@ -68,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DemoWeb\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\nghbv\\OneDrive\\M\u00E1y t\u00EDnh\\Synchronous-Group\\DemoWeb\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "DemoWeb\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAC4AAAByAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-03T06:27:33.389Z",
               "EditorCaption": ""
