@@ -1,0 +1,279 @@
+﻿@model DemoWeb.Models.ErrorViewModel
+
+@{
+    ViewData["Title"] = "QLDT";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Doanh Thu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #3da59c;
+            color: #fff;
+            padding-top: 10px;
+            min-height: 50px;
+            border-bottom: #fff 3px solid;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #3da59c;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        .button {
+            background: #3da59c;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+            .button:hover {
+                background: #555;
+            }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 400px;
+        }
+
+            .modal-content h2 {
+                margin-top: 0;
+            }
+
+            .modal-content .form-group {
+                margin-bottom: 15px;
+            }
+
+                .modal-content .form-group label {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                .modal-content .form-group input {
+                    width: 100%;
+                    padding: 8px;
+                    box-sizing: border-box;
+                }
+
+                .modal-content .form-group button {
+                    margin-top: 10px;
+                }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quản lý Doanh Thu</h1>
+    </header>
+
+    <div class="container">
+        <button class="button" onclick="openAddModal()">Thêm Sản Phẩm</button>
+        <table id="ProductTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tên Sản phẩm</th>
+                    <th>Thể loại</th>
+                    <th>Giá tiền</th>
+                    <th>Ngày sản xuất</th>
+                    <th>Ngày cập nhật</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Các hàng sản phẩm sẽ được thêm bằng JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal Thêm Nhân viên -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <h2>Thêm Nhân viên</h2>
+            <div class="form-group">
+                <label for="addName">Tên Sản phẩm:</label>
+                <input type="text" id="addName">
+            </div>
+            <div class="form-group">
+                <label for="addPosition">Thể loại:</label>
+                <input type="text" id="addPosition">
+            </div>
+            <div class="form-group">
+                <label for="addDepartment">Giá tiền:</label>
+                <input type="text" id="addDepartment">
+            </div>
+            <div class="form-group">
+                <label for="addDate">Ngày sản xuất:</label>
+                <input type="date" id="addDate">
+            </div>
+            <div class="form-group">
+                <label for="addDate">Ngày cập nhật:</label>
+                <input type="date" id="addDate">
+            </div>
+            <button class="button" onclick="addEmployee()">Thêm</button>
+            <button class="button" onclick="closeAddModal()">Hủy</button>
+        </div>
+    </div>
+
+    <!-- Modal Sửa Sửa sản phẩm -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>Sửa Nhân viên</h2>
+            <div class="form-group">
+                <label for="editName">Tên Sản phẩm:</label>
+                <input type="text" id="editName">
+            </div>
+            <div class="form-group">
+                <label for="editPosition">Thể loại:</label>
+                <input type="text" id="editPosition">
+            </div>
+            <div class="form-group">
+                <label for="editDepartment">Giá tiền:</label>
+                <input type="text" id="editDepartment">
+            </div>
+            <div class="form-group">
+                <label for="editDate">Ngày sản xuất:</label>
+                <input type="date" id="editDate">
+            </div>
+            <div class="form-group">
+                <label for="editDate">Ngày cập nhật:</label>
+                <input type="date" id="editDate">
+            </div>
+            <button class="button" onclick="updateEmployee()">Cập nhật</button>
+            <button class="button" onclick="closeEditModal()">Hủy</button>
+        </div>
+    </div>
+
+    <script>
+        let productIdCounter = 1;
+
+        function openAddModal() {
+            document.getElementById('addModal').style.display = 'flex';
+        }
+
+        function closeAddModal() {
+            document.getElementById('addModal').style.display = 'none';
+        }
+
+        function openEditModal(productId) {
+            const product = document.getElementById('product-' + productId);
+            document.getElementById('editName').value = product.querySelector('.name').innerText;
+            document.getElementById('editGener').value = product.querySelector('.gener').innerText;
+            document.getElementById('editPrice').value = product.querySelector('.price').innerText;
+            document.getElementById('editProductionDate').value = product.querySelector('.productiodate').innerText;
+            document.getElementById('editUpdateDate').value = product.querySelector('.updatedate').innerText;
+            document.getElementById('editModal').style.display = 'flex';
+            document.getElementById('editModal').setAttribute('data-id', employeeId);
+        }
+
+        function closeEditModal() {
+            document.getElementById('editModal').style.display = 'none';
+        }
+
+        function addEmployee() {
+            const name = document.getElementById('addName').value;
+            const gener = document.getElementById('addGener').value;
+            const price = document.getElementById('addPrice').value;
+            const productiondate = document.getElementById('addProductionDate').value;
+            const updatedate = document.getElementById('addUpdateDate').value;
+
+            const tableBody = document.querySelector('#productTable tbody');
+            const row = tableBody.insertRow();
+            row.setAttribute('id', 'product-' + productIdCounter);
+
+            row.innerHTML = `
+                                        <td>${productIdCounter}</td>
+                                        <td class="name">${name}</td>
+                                        <td class="gener">${gener}</td>
+                                        <td class="price">${price}</td>
+                                        <td class="productiondate">${productiondate}</td>
+                                        <td class="updatedate">${updatedate}</td>
+                                        <td class="action-buttons">
+                                            <button class="button" onclick="openEditModal(${productIdCounter})">Sửa</button>
+                                            <button class="button" onclick="deleteEmployee(${productIdCounter})">Xóa</button>
+                                        </td>
+                                    `;
+
+            productIdCounter++;
+            closeAddModal();
+        }
+
+        function updateProduct() {
+            const productId = document.getElementById('editModal').getAttribute('data-id');
+            const product = document.getElementById('product-' + productId);
+
+            product.querySelector('.name').innerText = document.getElementById('editName').value;
+            product.querySelector('.gener').innerText = document.getElementById('editGener').value;
+            product.querySelector('.price').innerText = document.getElementById('editPrice').value;
+            product.querySelector('.productiondate').innerText = document.getElementById('editProductionDate').value;
+            product.querySelector('.updatedate').innerText = document.getElementById('editUpdateDate').value;
+
+            closeEditModal();
+        }
+
+        function deleteProduct(productId) {
+            const product = document.getElementById('product-' + productId);
+            product.remove();
+        }
+    </script>
+</body>
+</html>
