@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DemoWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eb3f3961fe1b5b9209dd439fa6ae83d6304cf292")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+368e842af4fb2cc40538f3a0d2f3bb0c9626d627")]
+>>>>>>> 37e08829918d9a4d3fff9812d5996acbe46bb80b
 [assembly: System.Reflection.AssemblyProductAttribute("DemoWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DemoWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
