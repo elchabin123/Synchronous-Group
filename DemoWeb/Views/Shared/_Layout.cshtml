@@ -28,11 +28,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownDanhMuc" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục QL</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownCategory">
-                            <li><a class="dropdown-item" href="/">QL Doanh thu</a></li>
+                            <li><a href="@Url.Action("QLDT", "Home")" class="dropdown-item">QL Doanh thu</a></li>
                             <li><a href="@Url.Action("QLNV", "Home")" class="dropdown-item">QL Nhân viên</a></li>
                             <li><a class="dropdown-item" href="/">QL Sản phẩm</a></li>
                             <li><a class="dropdown-item" href="@Url.Action("Intro", "Home")">QL Trang giới thiệu</a></li>
-                            <li><a class="dropdown-item" href="/">QL Lịch sử hoạt động</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("History", "Home")">QL Lịch sử hoạt động</a></li>
                         </ul>
                         
                     </li>
@@ -43,10 +43,7 @@
         </div>
     </header>
 
-    <!--Giỏ hàng-->
-    <div class="container position-relative">
-        <button class="btn position-absolute top-0 end-0 mt-3"><i class="fas fa-shopping-cart fa-2x"></i></button>
-    </div>
+   
      
         <main role="main" class="pb-3">
             @RenderBody()
@@ -61,6 +58,21 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartCountElement = document.getElementById('cart-count');
+            let cartCount = 0;
+
+            // Bắt sự kiện click cho tất cả các nút thêm vào giỏ hàng
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    cartCount++;
+                    cartCountElement.textContent = cartCount;
+                });
+            });
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
