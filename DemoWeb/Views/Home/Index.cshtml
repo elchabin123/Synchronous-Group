@@ -132,7 +132,7 @@
                                         <img src="${book.image}" alt="${book.name}" style="width:100%">
                                         <span class="w3-tag w3-display-topleft">${book.tag}</span>
                                         <div class="w3-display-middle w3-display-hover">
-                                            <button class="w3-button w3-black">Thêm vào<i class="fa fa-shopping-cart"></i></button>
+                                              <button class="add-to-cart w3-button w3-black">Thêm vào<i class="fa fa-shopping-cart"></i></button>
                                         </div>
                                     </div>
                                     <p>${book.name}<br><b>${book.price}</b></p>
@@ -144,6 +144,44 @@
         const tags = ["KHOA HỌC VIỄN TƯỞNG", "New York", "Tiểu thuyết", "ANIME", "Manhwa", "CONAN", "MANGA", "Baby", "HARRY POTTER", "News", "Clothing", "Bí quyết của người giàu", "Sports", "Games"];
         const tagContainer = document.getElementById('tagContainer');
         tagContainer.innerHTML = tags.map(tag => `<span class="w3-tag w3-grey w3-small w3-margin-bottom">${tag}</span> `).join('');
+    </script>
+    <script>
+                        <!--Màn hình nhỏ trang chủ-- >
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+        }
     </script>
 </body>
 </html>
