@@ -52,5 +52,9 @@ namespace DemoWeb.Controllers
         {
             return View();
         }
+        public IActionResult QLSP() 
+        {
+            return View();
+        }
     }
 }
