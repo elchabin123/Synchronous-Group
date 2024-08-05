@@ -1,8 +1,4 @@
-﻿@model DemoWeb.Models.ErrorViewModel
-
-@{
-    ViewData["Title"] = "History";
-}
+﻿﻿
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,20 +32,18 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Tên Sản Phẩm</th>
-                <th>Thể loại</th>
-                <th>Số lượng</th>
-                <th>Giá tiền</th>
+                <th>Mã NV</th>
+                <th>Ngày Thực Hiện</th>
+                <th>Nội dung</th>
                 <th>Thao tác</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>01</td>
-                <td>Harry Poster và hòn đá phù thủy</td>
-                <td>Tiểu thuyết</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>PTNV0001</td>
+                <td>05/08/2024</td>
+                <td>Thanh toán</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -57,10 +51,9 @@
             </tr>
             <tr>
                 <td>02</td>
-                <td>Harry Poster và hoàng tử lai</td>
-                <td>Tiểu thuyết</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>PTNV0002</td>
+                <td>04/08/2024</td>
+                <td>Thanh toán</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -68,10 +61,9 @@
             </tr>
             <tr>
                 <td>03</td>
-                <td>Harry Poster và hội phượng hoàng</td>
-                <td>Tiểu thuyết</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>FTNV0007</td>
+                <td>04/08/2024</td>
+                <td>Thanh toán</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -79,10 +71,9 @@
             </tr>
             <tr>
                 <td>04</td>
-                <td>Harry Poster and the Phillosopher's Stone</td>
-                <td>Tiểu thuyết</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>FTQL0004</td>
+                <td>01/08/2024</td>
+                <td>Sửa thông tin sản phẩm</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -90,10 +81,9 @@
             </tr>
             <tr>
                 <td>05</td>
-                <td>Hãy nhớ tên anh ấy</td>
-                <td>Tiểu thuyết</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>FTQL0003</td>
+                <td>01/08/2024</td>
+                <td>Xóa sản phẩm</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -101,10 +91,9 @@
             </tr>
             <tr>
                 <td>06</td>
-                <td>Sọ dừa</td>
-                <td>Thiếu nhi</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>FTNV0011</td>
+                <td>30/07/2024</td>
+                <td>Thanh toán</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -112,10 +101,9 @@
             </tr>
             <tr>
                 <td>07</td>
-                <td>Hoàng tử bé</td>
-                <td>Thiếu nhi</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>PTNV0010</td>
+                <td>29/07/2024</td>
+                <td>Thanh toán</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -123,10 +111,9 @@
             </tr>
             <tr>
                 <td>08</td>
-                <td>Nội giới và ngoại giới</td>
-                <td>Khoa học</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>PTQL0002</td>
+                <td>29/07/2024</td>
+                <td>Thêm sản phẩm</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -134,10 +121,9 @@
             </tr>
             <tr>
                 <td>09</td>
-                <td>Starry Night</td>
-                <td>Tiểu thuyết</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>PTNV0015</td>
+                <td>28/07/2024</td>
+                <td>Thanh toán</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
@@ -145,10 +131,9 @@
             </tr>
             <tr>
                 <td>10</td>
-                <td>Dế mèn</td>
-                <td>Thiếu nhi</td>
-                <td>1</td>
-                <td>30.000VNĐ</td>
+                <td>FTOL0019</td>
+                <td>27/07/2024</td>
+                <td>Thêm và Sửa sản phẩm</td>
                 <td>
                     <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
                     <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>

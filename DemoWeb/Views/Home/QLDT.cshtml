@@ -1,273 +1,180 @@
-﻿@model DemoWeb.Models.ErrorViewModel
-
-@{
-    ViewData["Title"] = "QLDT";
-}
-
+﻿﻿
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản lý Doanh Thu</title>
+    <title>Quản Lý Doanh Thu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: #3da59c;
-            color: #fff;
-            padding-top: 10px;
-            min-height: 50px;
-            border-bottom: #fff 3px solid;
-            text-align: center;
+            margin: 20px;
         }
 
         table {
-            width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            background: #fff;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
         }
 
         th, td {
-            padding: 10px;
+            border: 1px solid #ddd;
+            padding: 8px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
         }
 
         th {
-            background: #3da59c;
-            color: #fff;
+            background-color: #f2f2f2;
         }
-
-        tr:nth-child(even) {
-            background: #f2f2f2;
-        }
-
-        .button {
-            background: #3da59c;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-            .button:hover {
-                background: #555;
-            }
-
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            width: 400px;
-        }
-
-            .modal-content h2 {
-                margin-top: 0;
-            }
-
-            .modal-content .form-group {
-                margin-bottom: 15px;
-            }
-
-                .modal-content .form-group label {
-                    display: block;
-                    margin-bottom: 5px;
-                }
-
-                .modal-content .form-group input {
-                    width: 100%;
-                    padding: 8px;
-                    box-sizing: border-box;
-                }
-
-                .modal-content .form-group button {
-                    margin-top: 10px;
-                }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Quản lý Doanh Thu</h1>
-    </header>
+    <center> <h1>Quản Lý Doann Thu</h1> </center>
 
-    <div class="container">
-        <button class="button" onclick="openAddModal()">Thêm Sản Phẩm</button>
-        <table id="ProductTable">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Tên Sản phẩm</th>
-                    <th>Thể loại</th>
-                    <th>Giá tiền</th>
-                    <th>Ngày sản xuất</th>
-                    <th>Ngày cập nhật</th>
-                    <th>Thao tác</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Các hàng sản phẩm sẽ được thêm bằng JavaScript -->
-            </tbody>
-        </table>
-    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Thể loại</th>
+                <th>Số lượng</th>
+                <th>Ngày Bán</th>
+                <th>Giá Bán</th>
+                <th>Tổng Tiền</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Harry Poster và hòn đá phù thủy</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>15/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Harry Poster và hoàng tử lai</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>17/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Harry Poster và hội phượng hoàng</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>23/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>Harry Poster and the Phillosopher's Stone</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>27/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>Hãy nhớ tên anh ấy</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>27/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td>Sọ dừa</td>
+                <td>Thiếu nhi</td>
+                <td>1</td>
+                <td>30/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>Hoàng tử bé</td>
+                <td>Thiếu nhi</td>
+                <td>1</td>
+                <td>01/08/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>08</td>
+                <td>Nội giới và ngoại giới</td>
+                <td>Khoa học</td>
+                <td>1</td>
+                <td>04/08/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td>Starry Night</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>05/08/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Dế mèn</td>
+                <td>Thiếu nhi</td>
+                <td>1</td>
+                <td>05/08/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
 
-    <!-- Modal Thêm Nhân viên -->
-    <div id="addModal" class="modal">
-        <div class="modal-content">
-            <h2>Thêm Nhân viên</h2>
-            <div class="form-group">
-                <label for="addName">Tên Sản phẩm:</label>
-                <input type="text" id="addName">
-            </div>
-            <div class="form-group">
-                <label for="addPosition">Thể loại:</label>
-                <input type="text" id="addPosition">
-            </div>
-            <div class="form-group">
-                <label for="addDepartment">Giá tiền:</label>
-                <input type="text" id="addDepartment">
-            </div>
-            <div class="form-group">
-                <label for="addDate">Ngày sản xuất:</label>
-                <input type="date" id="addDate">
-            </div>
-            <div class="form-group">
-                <label for="addDate">Ngày cập nhật:</label>
-                <input type="date" id="addDate">
-            </div>
-            <button class="button" onclick="addEmployee()">Thêm</button>
-            <button class="button" onclick="closeAddModal()">Hủy</button>
-        </div>
-    </div>
-
-    <!-- Modal Sửa Sửa sản phẩm -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <h2>Sửa Nhân viên</h2>
-            <div class="form-group">
-                <label for="editName">Tên Sản phẩm:</label>
-                <input type="text" id="editName">
-            </div>
-            <div class="form-group">
-                <label for="editPosition">Thể loại:</label>
-                <input type="text" id="editPosition">
-            </div>
-            <div class="form-group">
-                <label for="editDepartment">Giá tiền:</label>
-                <input type="text" id="editDepartment">
-            </div>
-            <div class="form-group">
-                <label for="editDate">Ngày sản xuất:</label>
-                <input type="date" id="editDate">
-            </div>
-            <div class="form-group">
-                <label for="editDate">Ngày cập nhật:</label>
-                <input type="date" id="editDate">
-            </div>
-            <button class="button" onclick="updateEmployee()">Cập nhật</button>
-            <button class="button" onclick="closeEditModal()">Hủy</button>
-        </div>
-    </div>
-
-    <script>
-        let productIdCounter = 1;
-
-        function openAddModal() {
-            document.getElementById('addModal').style.display = 'flex';
-        }
-
-        function closeAddModal() {
-            document.getElementById('addModal').style.display = 'none';
-        }
-
-        function openEditModal(productId) {
-            const product = document.getElementById('product-' + productId);
-            document.getElementById('editName').value = product.querySelector('.name').innerText;
-            document.getElementById('editGener').value = product.querySelector('.gener').innerText;
-            document.getElementById('editPrice').value = product.querySelector('.price').innerText;
-            document.getElementById('editProductionDate').value = product.querySelector('.productiodate').innerText;
-            document.getElementById('editUpdateDate').value = product.querySelector('.updatedate').innerText;
-            document.getElementById('editModal').style.display = 'flex';
-            document.getElementById('editModal').setAttribute('data-id', employeeId);
-        }
-
-        function closeEditModal() {
-            document.getElementById('editModal').style.display = 'none';
-        }
-
-        function addEmployee() {
-            const name = document.getElementById('addName').value;
-            const gener = document.getElementById('addGener').value;
-            const price = document.getElementById('addPrice').value;
-            const productiondate = document.getElementById('addProductionDate').value;
-            const updatedate = document.getElementById('addUpdateDate').value;
-
-            const tableBody = document.querySelector('#productTable tbody');
-            const row = tableBody.insertRow();
-            row.setAttribute('id', 'product-' + productIdCounter);
-
-            row.innerHTML = `
-                               <td>${productIdCounter}</td>
-                               <td class="name">${name}</td>
-                               <td class="gener">${gener}</td>
-                               <td class="price">${price}</td>
-                               <td class="productiondate">${productiondate}</td>
-                               <td class="updatedate">${updatedate}</td>
-                               <td class="action-buttons">
-                                     <button class="button" onclick="openEditModal(${productIdCounter})">Sửa</button>
-                                     <button class="button" onclick="deleteEmployee(${productIdCounter})">Xóa</button>
-                               </td>
-                           `;
-
-            productIdCounter++;
-            closeAddModal();
-        }
-
-        function updateProduct() {
-            const productId = document.getElementById('editModal').getAttribute('data-id');
-            const product = document.getElementById('product-' + productId);
-
-            product.querySelector('.name').innerText = document.getElementById('editName').value;
-            product.querySelector('.gener').innerText = document.getElementById('editGener').value;
-            product.querySelector('.price').innerText = document.getElementById('editPrice').value;
-            product.querySelector('.productiondate').innerText = document.getElementById('editProductionDate').value;
-            product.querySelector('.updatedate').innerText = document.getElementById('editUpdateDate').value;
-
-            closeEditModal();
-        }
-
-        function deleteProduct(productId) {
-            const product = document.getElementById('product-' + productId);
-            product.remove();
-        }
-    </script>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
