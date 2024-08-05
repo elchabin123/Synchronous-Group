@@ -35,11 +35,20 @@ namespace DemoWeb.Controllers
         {
             return View();
         }
+        public IActionResult QLDT()
+        {
+            return View();
+        }
         public IActionResult QLNV() 
         {
             return View();
         }
         public IActionResult Intro() 
+        {
+            return View();
+        }
+     
+        public IActionResult History() 
         {
             return View();
         }
