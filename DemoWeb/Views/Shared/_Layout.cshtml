@@ -28,30 +28,30 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownDanhMuc" role="button" data-bs-toggle="dropdown" aria-expanded="false">Danh mục QL</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownCategory">
-                            <li><a href="@Url.Action("QLDT", "Home")" class="dropdown-item">QL Doanh thu</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("QLDT","Home")">QL Doanh thu</a></li>
                             <li><a href="@Url.Action("QLNV", "Home")" class="dropdown-item">QL Nhân viên</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("QLSP", "Home")">QL Sản phẩm</a></li>
+                            <li><a class="dropdown-item" href="/">QL Sản phẩm</a></li>
                             <li><a class="dropdown-item" href="@Url.Action("Intro", "Home")">QL Trang giới thiệu</a></li>
-                            <li><a class="dropdown-item" href="@Url.Action("History", "Home")">QL Lịch sử hoạt động</a></li>
+                            <li><a class="dropdown-item" href="@Url.Action("History","Home")">QL Lịch sử hoạt động</a></li>
                         </ul>
-                        
+
                     </li>
                     <input class="form-control me-2" style="width: 470px; height: 30px;" type="search" placeholder="Tìm kiếm" aria-label="Search">
                     <a href="/Home/Login" class="btn btn-primary" style="display: flex;justify-content: flex-end;">Đăng nhập</a>
-                </ul>                               
+                </ul>
             </div>
         </div>
     </header>
 
-     
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
@@ -85,7 +85,7 @@
         // cập nhật cart count
         updateCartCount();
 
-       
+
         bookContainer.addEventListener('click', function (event) {
             if (event.target && event.target.classList.contains('add-to-cart')) {
                 event.preventDefault();
