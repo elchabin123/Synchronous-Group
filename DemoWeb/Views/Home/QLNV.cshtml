@@ -18,8 +18,6 @@
             background-color: #f4f4f4;
         }
 
-
-
         header {
             background: #333;
             color: #fff;
@@ -129,8 +127,9 @@
                     <th>ID</th>
                     <th>Họ và Tên</th>
                     <th>Chức vụ</th>
-                    <th>Phòng ban</th>
                     <th>Ngày vào làm</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -153,12 +152,16 @@
                 <input type="text" id="addPosition">
             </div>
             <div class="form-group">
-                <label for="addDepartment">Phòng ban:</label>
-                <input type="text" id="addDepartment">
-            </div>
-            <div class="form-group">
                 <label for="addDate">Ngày vào làm:</label>
                 <input type="date" id="addDate">
+            </div>
+            <div class="form-group">
+                <label for="addEmail">Email:</label>
+                <input type="email" id="addEmail">
+            </div>
+            <div class="form-group">
+                <label for="addPhone">Số điện thoại:</label>
+                <input type="text" id="addPhone">
             </div>
             <button class="button" onclick="addEmployee()">Thêm</button>
             <button class="button" onclick="closeAddModal()">Hủy</button>
@@ -178,15 +181,47 @@
                 <input type="text" id="editPosition">
             </div>
             <div class="form-group">
-                <label for="editDepartment">Phòng ban:</label>
-                <input type="text" id="editDepartment">
-            </div>
-            <div class="form-group">
                 <label for="editDate">Ngày vào làm:</label>
                 <input type="date" id="editDate">
             </div>
+            <div class="form-group">
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail">
+            </div>
+            <div class="form-group">
+                <label for="editPhone">Số điện thoại:</label>
+                <input type="text" id="editPhone">
+            </div>
             <button class="button" onclick="updateEmployee()">Cập nhật</button>
             <button class="button" onclick="closeEditModal()">Hủy</button>
+        </div>
+    </div>
+
+    <!-- Modal Hiển thị chi tiết Nhân viên -->
+    <div id="detailModal" class="modal">
+        <div class="modal-content">
+            <h2>Chi tiết Nhân viên</h2>
+            <div class="form-group">
+                <label for="detailName">Họ và Tên:</label>
+                <input type="text" id="detailName" readonly>
+            </div>
+            <div class="form-group">
+                <label for="detailPosition">Chức vụ:</label>
+                <input type="text" id="detailPosition" readonly>
+            </div>
+            <div class="form-group">
+                <label for="detailDate">Ngày vào làm:</label>
+                <input type="date" id="detailDate" readonly>
+            </div>
+            <div class="form-group">
+                <label for="detailEmail">Email:</label>
+                <input type="email" id="detailEmail" readonly>
+            </div>
+            <div class="form-group">
+                <label for="detailPhone">Số điện thoại:</label>
+                <input type="text" id="detailPhone" readonly>
+            </div>
+            <button class="button" onclick="closeDetailModal()">Đóng</button>
         </div>
     </div>
 
@@ -205,8 +240,9 @@
             const employee = document.getElementById('employee-' + employeeId);
             document.getElementById('editName').value = employee.querySelector('.name').innerText;
             document.getElementById('editPosition').value = employee.querySelector('.position').innerText;
-            document.getElementById('editDepartment').value = employee.querySelector('.department').innerText;
             document.getElementById('editDate').value = employee.querySelector('.date').innerText;
+            document.getElementById('editEmail').value = employee.querySelector('.email').innerText;
+            document.getElementById('editPhone').value = employee.querySelector('.phone').innerText;
             document.getElementById('editModal').style.display = 'flex';
             document.getElementById('editModal').setAttribute('data-id', employeeId);
         }
@@ -215,27 +251,44 @@
             document.getElementById('editModal').style.display = 'none';
         }
 
+        function openDetailModal(employeeId) {
+            const employee = document.getElementById('employee-' + employeeId);
+            document.getElementById('detailName').value = employee.querySelector('.name').innerText;
+            document.getElementById('detailPosition').value = employee.querySelector('.position').innerText;
+            document.getElementById('detailDate').value = employee.querySelector('.date').innerText;
+            document.getElementById('detailEmail').value = employee.querySelector('.email').innerText;
+            document.getElementById('detailPhone').value = employee.querySelector('.phone').innerText;
+            document.getElementById('detailModal').style.display = 'flex';
+        }
+
+        function closeDetailModal() {
+            document.getElementById('detailModal').style.display = 'none';
+        }
+
         function addEmployee() {
             const name = document.getElementById('addName').value;
             const position = document.getElementById('addPosition').value;
-            const department = document.getElementById('addDepartment').value;
             const date = document.getElementById('addDate').value;
+            const email = document.getElementById('addEmail').value;
+            const phone = document.getElementById('addPhone').value;
 
             const tableBody = document.querySelector('#employeeTable tbody');
             const row = tableBody.insertRow();
             row.setAttribute('id', 'employee-' + employeeIdCounter);
 
             row.innerHTML = `
-                        <td>${employeeIdCounter}</td>
-                        <td class="name">${name}</td>
-                        <td class="position">${position}</td>
-                        <td class="department">${department}</td>
-                        <td class="date">${date}</td>
-                        <td class="action-buttons">
-                            <button class="button" onclick="openEditModal(${employeeIdCounter})">Sửa</button>
-                            <button class="button" onclick="deleteEmployee(${employeeIdCounter})">Xóa</button>
-                        </td>
-                    `;
+                                <td>${employeeIdCounter}</td>
+                                <td class="name">${name}</td>
+                                <td class="position">${position}</td>
+                                <td class="date">${date}</td>
+                                <td class="email">${email}</td>
+                                <td class="phone">${phone}</td>
+                                <td class="action-buttons">
+                                    <button class="button" onclick="openDetailModal(${employeeIdCounter})">Chi tiết</button>
+                                    <button class="button" onclick="openEditModal(${employeeIdCounter})">Sửa</button>
+                                    <button class="button" onclick="deleteEmployee(${employeeIdCounter})">Xóa</button>
+                                </td>
+                            `;
 
             employeeIdCounter++;
             closeAddModal();
@@ -247,8 +300,9 @@
 
             employee.querySelector('.name').innerText = document.getElementById('editName').value;
             employee.querySelector('.position').innerText = document.getElementById('editPosition').value;
-            employee.querySelector('.department').innerText = document.getElementById('editDepartment').value;
             employee.querySelector('.date').innerText = document.getElementById('editDate').value;
+            employee.querySelector('.email').innerText = document.getElementById('editEmail').value;
+            employee.querySelector('.phone').innerText = document.getElementById('editPhone').value;
 
             closeEditModal();
         }
@@ -260,4 +314,3 @@
     </script>
 </body>
 </html>
-
