@@ -1,0 +1,22 @@
+﻿@model List<CartItem>
+
+<h2>Giỏ hàng của bạn</h2>
+<table class="table">
+    <tr>
+        <th>Hình ảnh</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá</th>
+        <th>Số lượng</th>
+        <th>Tổng</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><img src="@item.Product.ImageUrl" style="width:50px;" /></td>
+            <td>@item.Product.Name</td>
+            <td>@item.Product.Price</td>
+            <td>@item.Quantity</td>
+            <td>@(item.Product.Price * item.Quantity)</td>
+        </tr>
+    }
+</table>
