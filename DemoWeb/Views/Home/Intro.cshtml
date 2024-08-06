@@ -64,9 +64,9 @@
             text-decoration: none;
         }
 
-            .button:hover {
+        .button:hover {
                 background: #555;
-            }
+        }
 
         .action-buttons {
             display: flex;
@@ -85,35 +85,41 @@
             align-items: center;
         }
 
-        .modal-content {
-            background: #fff;
+        ..modal-content {
+            width: 1000px; /* Adjust width as needed */
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: calc(100vh - 100px);
+            margin: 0 auto;
             padding: 20px;
+            background-color: #fff;
             border-radius: 5px;
-            width: 400px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-            .modal-content h2 {
-                margin-top: 0;
-            }
+        .form-group {
+            margin-bottom:   15px;
+        }
 
-            .modal-content .form-group {
-                margin-bottom: 15px;
-            }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
 
-                .modal-content .form-group label {
-                    display: block;
-                    margin-bottom: 5px;
-                }
+        input[type="text"],
+        input[type="file"],
+        input[type="date"] {
+            width: 100%;
+            padding:   8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
 
-                .modal-content .form-group input {
-                    width: 100%;
-                    padding: 8px;
-                    box-sizing: border-box;
-                }
-
-                .modal-content .form-group button {
-                    margin-top: 10px;
-                }
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -122,7 +128,7 @@
     </header>
 
     <div class="container">
-        <button class="button" onclick="openAddModal()">Sửa</button>
+        
         <table id="employeeTable">
             <thead>
                 <tr>
@@ -132,10 +138,20 @@
                     <th>Nội dung</th>
                     <th>Địa chỉ</th>
                     <th>Liên hệ</th>
+                    <th>Thao tác</th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Các hàng giới thiệu sẽ được thêm bằng JavaScript -->
+            <td>01</td>
+            <td><img src="~/picture/biahome.png" /></td>
+            <td><img src="~/picture/anh4.jpg" /></td>
+            <td>Hệ thống nhà sách của chúng tôi mang đến cho bạn thế giới sách phong phú và tiện lợi ngay cả trên website. Chúng tôi không chỉ là nơi mua sắm sách mà còn là không gian văn hóa, nơi bạn có thể khám phá tri thức, kết nối với cộng đồng yêu sách và nuôi dưỡng niềm đam mê đọc.</td>
+            <td>11A Đường ABC, TP. HCM</td>
+            <td>1900 1234</td>
+            <td>
+                <a><button class="btn btn-primary" onclick="openAddModal()">Sửa</button></a>
+                <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Xóa</a>
+            </td>
             </tbody>
         </table>
     </div>

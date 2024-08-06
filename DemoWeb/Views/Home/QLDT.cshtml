@@ -1,0 +1,180 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quản Lý Doanh Thu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <center> <h1>Quản Lý Doann Thu</h1> </center>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên Sản Phẩm</th>
+                <th>Thể loại</th>
+                <th>Số lượng</th>
+                <th>Ngày Bán</th>
+                <th>Giá Bán</th>
+                <th>Tổng Tiền</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>Harry Poster và hòn đá phù thủy</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>15/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>Harry Poster và hoàng tử lai</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>17/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>Harry Poster và hội phượng hoàng</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>23/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>Harry Poster and the Phillosopher's Stone</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>27/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>05</td>
+                <td>Hãy nhớ tên anh ấy</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>27/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>06</td>
+                <td>Sọ dừa</td>
+                <td>Thiếu nhi</td>
+                <td>1</td>
+                <td>30/07/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>07</td>
+                <td>Hoàng tử bé</td>
+                <td>Thiếu nhi</td>
+                <td>1</td>
+                <td>01/08/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>08</td>
+                <td>Nội giới và ngoại giới</td>
+                <td>Khoa học</td>
+                <td>1</td>
+                <td>04/08/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>09</td>
+                <td>Starry Night</td>
+                <td>Tiểu thuyết</td>
+                <td>1</td>
+                <td>05/08/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Dế mèn</td>
+                <td>Thiếu nhi</td>
+                <td>1</td>
+                <td>05/08/2024</td>
+                <td>30.000VNĐ</td>
+                <td>30.000VNĐ</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

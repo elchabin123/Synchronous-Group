@@ -54,12 +54,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZW1iZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Home/OLDT.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPTERULmNzaHRtbA==
+[C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Home/QLDT.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRTERULmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Home/QLNV.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRTE5WLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Home/QLSP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRTFNQLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/nghbv/OneDrive/Máy tính/Synchronous-Group/DemoWeb/Views/Shared/Error.cshtml]
