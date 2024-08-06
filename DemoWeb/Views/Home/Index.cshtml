@@ -1,5 +1,4 @@
-﻿
-@model DemoWeb.Models.ErrorViewModel
+﻿@model DemoWeb.Models.ErrorViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -35,10 +34,28 @@
     </style>
 </head>
 <body>
+<<<<<<< HEAD
     <!--Giỏ hàng-->
     <div class="container position-relative">
         <button class="btn position-absolute top-0 end-0 mt-3"><i class="fas fa-shopping-cart fa-2x"></i> <p id="cart-count" class=" position-absolute top-0 end-0 mt-3">0</p></button>
     </div>
+=======
+    <!--Giỏ Hàng-->
+    <header style="background-color:cornflowerblue;" class="navbar navbar-expand-sm navbar-dark">
+        <div class="container">
+                <span class="navbar-toggler-icon"></span>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Cart")">Giỏ hàng (<span id="cart-count">0</span>)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--Thể Loại-->
+>>>>>>> elchabin
     <main role="main" class="pb-3">
         <div class="w3-padding-60 w3-large w3-text-grey" style="font-weight:bold; margin-top:90px">
             <a href="#" class="w3-bar-item w3-button">Tiểu thuyết</a>
@@ -69,7 +86,7 @@
 
             <div class="container" style="margin: 10px">
                 <div class="w3-row w3-grayscale" id="bookContainer">
-                    <!-- Book items will be dynamically inserted here -->
+                    <!-- Sách sẽ được chèn tự động vào đây Không chỉnh sửa  -->
                 </div>
             </div>
 
@@ -78,7 +95,8 @@
                     <div class="w3-two">
                         <h3>TAGS PHỔ BIẾN</h3>
                         <p id="tagContainer">
-                            <!-- Tags will be dynamically inserted here -->
+                            <!-- Tags sẽ được chèn tự động vào đây không chỉnh sửa -->
+                            
                         </p>
                     </div>
                 </div>
@@ -87,6 +105,7 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         // Slideshow functionality
         let slideIndex = 1;
@@ -115,76 +134,40 @@
             dots[slideIndex - 1].className += " w3-white";
         }
 
-        // Dynamically populate books
+        // nhưng cuốn sách phổ biến
         const books = [
-            { image: "/picture/harry1.jpg", name: "Harry Potter và hòn đá phù thủy", price: "30.000VNĐ", tag: "New" },
-            { image: "/picture/harry2.jpg", name: "Harry Potter và hoàng tử lai", price: "30.000VNĐ", tag: "New" },
-            { image: "/picture/harry3.jpg", name: "Harry Potter và hội phượng hoàng", price: "30.000VNĐ", tag: "New" },
-            { image: "/picture/harry4.jpg", name: "Harry Potter and the Philosopher's Stone", price: "30.000VNĐ", tag: "New" },
-            { image: "/picture/haynhotenanhay.jpg", name: "Hãy nhớ tên anh ấy", price: "30.000VNĐ", tag: "New" },
-            { image: "/picture/sodua.jpg", name: "Sọ dừa", price: "30.000VNĐ", tag: "Sale" },
-            { image: "/picture/hoangtube.jpg", name: "Hoàng tử bé", price: "30.000VNĐ", tag: "Sale" },
-            { image: "/picture/noigioivangoaigioi.jpg", name: "Nội giới và ngoại giới", price: "30.000VNĐ", tag: "Sale" },
+            { image: "/picture/harry1.jpg", name: "Harry Potter và hòn đá phù thủy", price: "30.000VNĐ", tag: "New", id: 1 },
+            { image: "/picture/harry2.jpg", name: "Harry Potter và hoàng tử lai", price: "30.000VNĐ", tag: "New", id: 2 },
+            { image: "/picture/harry3.jpg", name: "Harry Potter và hội phượng hoàng", price: "30.000VNĐ", tag: "New", id: 3 },
+            { image: "/picture/harry4.jpg", name: "Harry Potter and the Philosopher's Stone", price: "30.000VNĐ", tag: "New", id: 4 },
+            { image: "/picture/haynhotenanhay.jpg", name: "Hãy nhớ tên anh ấy", price: "30.000VNĐ", tag: "New", id: 5 },
+            { image: "/picture/sodua.jpg", name: "Sọ dừa", price: "30.000VNĐ", tag: "Sale", id: 6 },
+            { image: "/picture/hoangtube.jpg", name: "Hoàng tử bé", price: "30.000VNĐ", tag: "Sale", id: 7 },
+            { image: "/picture/noigioivangoaigioi.jpg", name: "Nội giới và ngoại giới", price: "30.000VNĐ", tag: "Sale", id: 8 },
         ];
 
+        //sản phẩm
         const bookContainer = document.getElementById('bookContainer');
         bookContainer.innerHTML = books.map(book => `
-                            <div class="w3-col l3 s6">
-                                <div class="w3-container">
-                                    <div class="w3-display-container">
-                                        <img src="${book.image}" alt="${book.name}" style="width:100%">
-                                        <span class="w3-tag w3-display-topleft">${book.tag}</span>
-                                        <div class="w3-display-middle w3-display-hover">
-                                              <button class="add-to-cart w3-button w3-black">Thêm vào<i class="fa fa-shopping-cart"></i></button>
-                                        </div>
-                                    </div>
-                                    <p>${book.name}<br><b>${book.price}</b></p>
+                    <div class="w3-col l3 s6">
+                        <div class="w3-container">
+                            <div class="w3-display-container">
+                                <img src="${book.image}" alt="${book.name}" style="width:100%">
+                                <span class="w3-tag w3-display-topleft">${book.tag}</span>
+                                <div class="w3-display-middle w3-display-hover">
+                                    <button class="add-to-cart w3-button w3-black" data-id="${book.id}">Thêm vào<i class="fa fa-shopping-cart"></i></button>
                                 </div>
                             </div>
-                        `).join('');
+                            <p>${book.name}<br><b>${book.price}</b></p>
+                        </div>
+                    </div>
+                `).join('');
 
-        // Dynamically populate tags
+        // tags phổ biến
         const tags = ["KHOA HỌC VIỄN TƯỞNG", "New York", "Tiểu thuyết", "ANIME", "Manhwa", "CONAN", "MANGA", "Baby", "HARRY POTTER", "News", "Clothing", "Bí quyết của người giàu", "Sports", "Games"];
         const tagContainer = document.getElementById('tagContainer');
-        tagContainer.innerHTML = tags.map(tag => `<span class="w3-tag w3-grey w3-small w3-margin-bottom">${tag}</span> `).join('');
-    </script>
-    <script>
-                        <!--Màn hình nhỏ trang chủ-- >
-            function w3_open() {
-                document.getElementById("mySidebar").style.display = "block";
-                document.getElementById("myOverlay").style.display = "block";
-            }
+        tagContainer.innerHTML = tags.map(tag => `<span class="w3-tag w3-grey w3-small w3-margin-bottom">${tag}</span>`).join(' ');
 
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function currentDiv(n) {
-            showDivs(slideIndex = n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" w3-white", "");
-            }
-            x[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " w3-white";
-        }
     </script>
 </body>
 </html>
