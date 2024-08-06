@@ -37,7 +37,7 @@
     <!--Giỏ Hàng-->
     <header style="background-color:cornflowerblue;" class="navbar navbar-expand-sm navbar-dark">
         <div class="container">
-                <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
@@ -60,6 +60,7 @@
             <a href="#" class="w3-bar-item w3-button">Kinh dị</a>
             <a href="#" class="w3-bar-item w3-button">Trinh thám</a>
         </div>
+
 
         <div class="main" style="margin-top: 120px">
             <div class="w3-content w3-display-container" style="max-width:800px">
@@ -89,7 +90,7 @@
                         <h3>TAGS PHỔ BIẾN</h3>
                         <p id="tagContainer">
                             <!-- Tags sẽ được chèn tự động vào đây không chỉnh sửa -->
-                            
+
                         </p>
                     </div>
                 </div>
@@ -100,6 +101,32 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        // Slideshow functionality
+        let slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            const x = document.getElementsByClassName("mySlides");
+            const dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (let i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+        }
 
         // nhưng cuốn sách phổ biến
         const books = [
@@ -116,32 +143,24 @@
         //sản phẩm
         const bookContainer = document.getElementById('bookContainer');
         bookContainer.innerHTML = books.map(book => `
-                    <div class="w3-col l3 s6">
-                        <div class="w3-container">
-                            <div class="w3-display-container">
-                                <img src="${book.image}" alt="${book.name}" style="width:100%">
-                                <span class="w3-tag w3-display-topleft">${book.tag}</span>
-                                <div class="w3-display-middle w3-display-hover">
-                                    <button class="add-to-cart w3-button w3-black" data-id="${book.id}">Thêm vào<i class="fa fa-shopping-cart"></i></button>
+                            <div class="w3-col l3 s6">
+                                <div class="w3-container">
+                                    <div class="w3-display-container">
+                                        <img src="${book.image}" alt="${book.name}" style="width:100%">
+                                        <span class="w3-tag w3-display-topleft">${book.tag}</span>
+                                        <div class="w3-display-middle w3-display-hover">
+                                            <button class="add-to-cart w3-button w3-black" data-id="${book.id}">Thêm vào<i class="fa fa-shopping-cart"></i></button>
+                                        </div>
+                                    </div>
+                                    <p>${book.name}<br><b>${book.price}</b></p>
                                 </div>
                             </div>
-                            <p>${book.name}<br><b>${book.price}</b></p>
-                        </div>
-                    </div>
-                `).join('');
+                        `).join('');
 
         // tags phổ biến
         const tags = ["KHOA HỌC VIỄN TƯỞNG", "New York", "Tiểu thuyết", "ANIME", "Manhwa", "CONAN", "MANGA", "Baby", "HARRY POTTER", "News", "Clothing", "Bí quyết của người giàu", "Sports", "Games"];
         const tagContainer = document.getElementById('tagContainer');
-
         tagContainer.innerHTML = tags.map(tag => `<span class="w3-tag w3-grey w3-small w3-margin-bottom">${tag}</span>`).join(' ');
-     
-    
-        //Màn hình nhỏ trang chủ
-        function w3_open() {
-                document.getElementById("mySidebar").style.display = "block";
-        }
-
 
     </script>
 </body>
